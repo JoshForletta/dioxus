@@ -614,8 +614,8 @@ pub fn gen_page(config: &CrateConfig, manifest: Option<&AssetManifest>, serve: b
             "</body",
             &format!(
                 r#"<script type="module">
-    import init from "/{base_path}/assets/dioxus/{app_name}.js";
-    init("/{base_path}/assets/dioxus/{app_name}_bg.wasm").then(wasm => {{
+    import init from "{base_path}/assets/dioxus/{app_name}.js";
+    init("{base_path}/assets/dioxus/{app_name}_bg.wasm").then(wasm => {{
       if (wasm.__wbindgen_start == undefined) {{
         wasm.main();
       }}
